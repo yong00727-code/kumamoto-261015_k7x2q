@@ -14,7 +14,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;margin
 main{max-width:760px;margin:0 auto;padding:14px}
 .hero{background:linear-gradient(135deg,#1f5c46,#2f6fd0);color:#fff;border-radius:16px;padding:20px 18px;margin-bottom:14px}
 .hero h1{font-size:1.4rem;margin:0 0 4px}.hero p{margin:0;opacity:.92;font-size:.92rem}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
 .stat{background:rgba(255,255,255,.16);border-radius:10px;padding:8px;text-align:center;font-size:.78rem}
 .stat b{display:block;font-size:1.05rem}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
@@ -33,7 +33,7 @@ svg text{fill:var(--tx);font-size:12px;font-family:inherit}
 .dt{stroke:#fff}.dt.dk{fill:var(--lbl)}.dt.d3c{fill:var(--c3)}.dt.est{fill:var(--halo);stroke:var(--lbl)}.d3c.est{stroke:var(--c3)}
 .tm{font-weight:600;stroke:none}.tm.s1{fill:var(--c1)}.tm.s3{fill:var(--c3)}.tm.s4{fill:var(--c4)}.tm.s2{fill:var(--c2)}
 .sbl{stroke:var(--tx);stroke-width:3}.pf.sea{font-style:italic}
-details.card summary{font-weight:700;font-size:1.02rem;cursor:pointer}details.card[open] summary{margin-bottom:8px}.tt td a{word-break:break-all}.tt td:first-child{min-width:3.6em;word-break:keep-all}table.tt{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:8px}.tt th,.tt td{border-top:1px solid var(--line);padding:6px 4px;text-align:left;vertical-align:top}.tt th{color:var(--sub);font-weight:600}.g.off{display:none}.land{fill:var(--land);stroke:var(--coast);stroke-width:1}.land.kum{fill:var(--land2)}.gr{stroke:var(--grid);stroke-width:1;opacity:.7}.gt{fill:var(--gtc)}.pf{fill:var(--gtc);font-weight:700;opacity:.9}.pl{font-weight:600;fill:var(--lbl);stroke:none}.lb{fill:var(--halo);opacity:.78}
+details.card summary{font-weight:700;font-size:1.02rem;cursor:pointer}details.card[open] summary{margin-bottom:8px}.tt td a{word-break:break-all}.tt td:first-child{min-width:3.6em;word-break:keep-all}.nowh{font-weight:700;font-size:.9rem;margin:4px 0 6px}.nowr{display:flex;gap:10px;margin-bottom:12px}.nowr>div{flex:1;border:1px solid var(--line);border-radius:10px;padding:8px;text-align:center;line-height:1.5}.nowr b{font-size:1.25rem}.wxt td{font-size:.86rem;line-height:1.35}.wxt td:first-child{white-space:nowrap}.wxt td[colspan]{white-space:normal}.wxt .rain{color:var(--warn);font-weight:700}table.tt{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:8px}.tt th,.tt td{border-top:1px solid var(--line);padding:6px 4px;text-align:left;vertical-align:top}.tt th{color:var(--sub);font-weight:600}.g.off{display:none}.land{fill:var(--land);stroke:var(--coast);stroke-width:1}.land.kum{fill:var(--land2)}.gr{stroke:var(--grid);stroke-width:1;opacity:.7}.gt{fill:var(--gtc)}.pf{fill:var(--gtc);font-weight:700;opacity:.9}.pl{font-weight:600;fill:var(--lbl);stroke:none}.lb{fill:var(--halo);opacity:.78}
 .note{font-size:.8rem;color:var(--sub);margin:8px 0 0}
 .day{border-left:6px solid var(--c);padding-left:12px}
 .day h2{color:var(--c)}
@@ -59,8 +59,15 @@ ul{margin:4px 0 0;padding-left:18px;font-size:.9rem}li{margin-bottom:4px}
 <div class="stat"><b>3박 4일</b>2인 1실</div>
 <div class="stat"><b>골프 3회</b>27홀+18홀</div>
 <div class="stat"><b>약 130만원</b>인당 예상</div>
-<div class="stat"><b>와규 석식</b>예약 완료</div>
 </div>
+</section>
+
+<section class="card" id="wx">
+<h2>🌤️ 날씨 (10/15~10/18)</h2>
+<div id="wxnow"></div>
+<table class="tt wxt"><thead><tr><th>날짜</th><th>아소(리조트 인근)</th><th>구마모토 시내</th></tr></thead><tbody id="wxb"><tr><td colspan="3">날씨를 불러오는 중…</td></tr></tbody></table>
+<p class="small" id="wxn">예보는 이 페이지를 열 때마다 새로 불러옵니다.</p>
+<p class="small"><a class="mp" style="--c:var(--c1)" href="https://www.google.com/search?q=%EC%95%84%EC%86%8C+%EB%82%A0%EC%94%A8" target="_blank" rel="noopener">구글 날씨(아소)</a> <a class="mp" style="--c:var(--c1)" href="https://www.google.com/search?q=%EA%B5%AC%EB%A7%88%EB%AA%A8%ED%86%A0+%EB%82%A0%EC%94%A8" target="_blank" rel="noopener">구글 날씨(구마모토)</a></p>
 </section>
 
 <section class="card">
@@ -260,7 +267,7 @@ ul{margin:4px 0 0;padding-left:18px;font-size:.9rem}li{margin-bottom:4px}
 <li>인당 총 예상 약 130만원 (쇼핑 비용 제외)</li>
 </ul>
 </section>
-<p class="small"><b>v19</b> · 최종 수정 2026.10.11 · 지도 버튼은 구글 지도 검색 링크이며 정확한 지점은 열어서 확인이 필요합니다.</p>
+<p class="small"><b>v25</b> · 최종 수정 2026.10.11 · 지도 버튼은 구글 지도 검색 링크이며 정확한 지점은 열어서 확인이 필요합니다.</p>
 </main>
 <script>
 var sv=document.getElementById('rmap'),FW=820,FH=577,FIT=[170,118,540,380],vb=FIT.slice();
@@ -303,6 +310,54 @@ window.addEventListener('resize',apply);
 document.querySelectorAll('.chip').forEach(function(x){x.addEventListener('click',function(){x.classList.toggle('on');var g=document.getElementById('d'+x.dataset.d);if(g){g.classList.toggle('off',!x.classList.contains('on'));}apply();});});
 setFit(FIT);
 var ins=document.querySelectorAll('.mapbox2 svg')[1];if(ins){pills(ins,4);}
+</script>
+<script>
+(function(){
+var KEYS=['2026-10-15','2026-10-16','2026-10-17','2026-10-18'],DAYS=['10/15(목)','10/16(금)','10/17(토)','10/18(일)'];
+var LOC=[[32.95,131.05],[32.80,130.71]];
+var D='weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_speed_10m_max';
+var lastErr='';var cur=[null,null],t0=Date.now();var data=[null,null],st=['loading','loading'],cached=[0,0],ts=[0,0];
+function wc(c){if(c===0)return['☀️','맑음'];if(c===1)return['🌤️','대체로 맑음'];if(c===2)return['⛅','구름 조금'];if(c===3)return['☁️','흐림'];
+if(c===45||c===48)return['🌫️','안개'];if(c>=51&&c<=57)return['🌦️','이슬비'];if(c>=61&&c<=67)return['🌧️','비'];if(c>=71&&c<=77)return['🌨️','눈'];
+if(c>=80&&c<=82)return['🌦️','소나기'];if(c===85||c===86)return['🌨️','눈 소나기'];if(c>=95)return['⛈️','뇌우'];return['❔','알 수 없음'];}
+function urls(p){var q='?latitude='+p[0]+'&longitude='+p[1]+'&daily='+D+'&wind_speed_unit=ms&timezone=Asia%2FTokyo&start_date=2026-10-15&end_date=2026-10-18';
+return ['https://api.open-meteo.com/v1/forecast'+q+'&current=temperature_2m,apparent_temperature,weather_code','https://api.open-meteo.com/v1/forecast'+q,'https://api.open-meteo.com/v1/jma'+q];}
+function fj(u,ms){return new Promise(function(res,rej){var ac=window.AbortController?new AbortController():null;var t=setTimeout(function(){if(ac)ac.abort();rej(new Error('timeout'));},ms);
+fetch(u,ac?{signal:ac.signal}:{}).then(function(r){clearTimeout(t);if(!r.ok)throw new Error('http');return r.json();}).then(res,function(e){clearTimeout(t);rej(e);});});}
+function tryAll(p){var u=urls(p),i=0;return new Promise(function(res,rej){(function next(){if(i>=u.length)return rej(new Error('fail'));var x=u[i++];
+fj(x,12000).then(function(j){if(!j||!j.daily||!j.daily.time||!j.daily.time.length||!j.daily.temperature_2m_max)throw new Error('bad');res(j);}).catch(function(e){lastErr=(e&&e.message)?e.message:String(e);setTimeout(next,i===1?1200:2500);});})();});}
+function g(d,k,i){return(d[k]&&d[k][i]!==undefined)?d[k][i]:null;}
+function cell(d,key,k){if(!d){return '<span class="small">'+(st[k]==='loading'?'불러오는 중…':'불러오지 못함')+'</span>';}
+var i=d.time.indexOf(key);if(i<0)return '<span class="small">예보 없음</span>';
+var w=wc(g(d,'weather_code',i)),p=g(d,'precipitation_probability_max',i),mx=g(d,'temperature_2m_max',i),mn=g(d,'temperature_2m_min',i),wd=g(d,'wind_speed_10m_max',i),r=(p!==null&&p>=50);
+return w[0]+' '+w[1]+' '+(mn===null?'-':Math.round(mn))+'~'+(mx===null?'-':Math.round(mx))+'°C<br><span class="small'+(r?' rain':'')+'">강수 '+(p===null?'-':p)+'% · 바람 최대 '+(wd===null?'-':Math.round(wd))+'m/s</span>';}
+function fmt(t){var n=new Date(t);return (n.getMonth()+1)+'/'+n.getDate()+' '+('0'+n.getHours()).slice(-2)+':'+('0'+n.getMinutes()).slice(-2);}
+var SNAP=[['🌤️','맑음~구름 조금',11,12,26,27,'0~20'],['⛅','흐림 후 맑음',13,14,26,28,'0~30'],['☀️','맑음',14,17,29,30,'0~10'],['🌤️','맑음~구름 조금 (비 예보도 있음)',17,19,29,30,'10~20']];
+function snapRows(){var h='';for(var i=0;i<SNAP.length;i++){var q=SNAP[i];h+='<tr><td>'+DAYS[i]+'</td><td>'+q[0]+' '+(q[2]-4)+'~'+(q[5]-4)+'°C (추측)<br><span class="small">시내 예보에서 약 4℃ 낮춘 추측값 · 강수·바람 자료 없음</span></td><td>'+q[0]+' '+q[1]+' '+q[2]+'~'+q[5]+'°C<br><span class="small">최저 '+q[2]+'~'+q[3]+' / 최고 '+q[4]+'~'+q[5]+'°C · 강수 '+q[6]+'%</span></td></tr>';}return h;}
+function renderNow(){var el=document.getElementById('wxnow');if(!el)return;var nm=['아소(리조트 인근)','구마모토 시내'],h='';
+for(var k=0;k<2;k++){var c=cur[k];
+if(c&&c.temperature_2m!==null&&c.temperature_2m!==undefined){var ic=(c.weather_code===null||c.weather_code===undefined)?'':wc(c.weather_code)[0]+' ';var ap=(c.apparent_temperature===null||c.apparent_temperature===undefined)?'-':(Math.round(c.apparent_temperature*10)/10);
+h+='<div><span class="small">'+nm[k]+'</span><br>'+ic+'<b>'+(Math.round(c.temperature_2m*10)/10)+'°C</b> <span class="small">기온</span><br><span class="small">체감온도 </span><b style="font-size:1.05rem">'+ap+'°C</b>'+(cached[k]?'<br><span class="small">(저장된 값, 조회 '+fmt(ts[k])+')</span>':'')+'</div>';}
+else{h+='<div><span class="small">'+nm[k]+'</span><br><span class="small">'+(st[k]==='loading'?'불러오는 중…':'현재 기온 자료 없음')+'</span></div>';}}
+el.innerHTML='<div class="nowh">🕒 지금 기온·체감온도 (접속 시각 '+fmt(t0)+' 기준)</div><div class="nowr">'+h+'</div>';}
+function render(){renderNow();var h='';var _l=(st[0]==='loading'||st[1]==='loading'),_nd=(!data[0]&&!data[1]);
+if(!_l&&_nd){h=snapRows();}else{for(var i=0;i<KEYS.length;i++){h+='<tr><td>'+DAYS[i]+'</td><td>'+cell(data[0],KEYS[i],0)+'</td><td>'+cell(data[1],KEYS[i],1)+'</td></tr>';}}
+document.getElementById('wxb').innerHTML=h;
+var bad=(st[0]==='fail'?1:0)+(st[1]==='fail'?1:0),loading=(st[0]==='loading'||st[1]==='loading'),n=document.getElementById('wxn'),msg='';
+var nodata=(!data[0]&&!data[1]);
+if(loading){msg='날씨를 불러오는 중입니다…';}
+else if(nodata){var pv=(location.hostname||'').indexOf('github.io')<0;msg=(pv?'이 화면(미리보기 또는 파일 직접 열기)에서는 외부 날씨 서비스 접속이 막혀 있어 실시간 예보를 표시할 수 없습니다. 동반자용 GitHub 주소(Bitly)에서는 실시간 예보가 표시될 수 있습니다. ':'실시간 예보를 불러오지 못했습니다. ')+'대신 10/13~14에 확인한 참고 예보를 표시합니다(구마모토 시내, 일기예보 사이트마다 값이 달라 범위로 표시, 출처: tenki.jp·Yahoo!天気·Toshin.com). 18일은 한 사이트가 비 90%로 예보해 불확실합니다. 아소는 믿을 만한 자료를 찾지 못해 시내 예보에서 고도 차이로 추측한 값이며 실제와 다를 수 있습니다. 아래 링크에서도 확인하세요.'+(lastErr?' (오류: '+lastErr+')':'');}
+else{var t=Math.max(ts[0],ts[1]);msg=(bad&&!(cached[0]||cached[1])?'한 지역의 예보를 불러오지 못했습니다. ':'')+((cached[0]||cached[1])?'새로 불러오지 못한 지역은 저장된 예보를 표시합니다(조회 '+fmt(Math.min.apply(null,ts.filter(function(x){return x;})))+'). ':'조회 시각 '+fmt(t)+' (기기 시각) · ');
+msg+='예보는 바뀔 수 있으니 골프 당일 아침에 다시 확인하세요. 아소 위치는 리조트 인근 추정 좌표입니다. 강수확률 50% 이상은 빨간색입니다. 자료: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a>';}
+if(!loading&&bad)msg+=' <button id="wxr" type="button" style="border:1px solid var(--line);background:var(--card);color:var(--tx);border-radius:8px;padding:3px 10px;cursor:pointer">다시 시도</button>';
+n.innerHTML=msg;var b=document.getElementById('wxr');if(b)b.onclick=load;}
+function ck(k){return 'wxc1_'+k;}
+function readCache(){for(var k=0;k<2;k++){try{var c=JSON.parse(localStorage.getItem(ck(k))||'null');if(c&&c.daily&&c.daily.time){data[k]=c.daily;cur[k]=c.current||null;ts[k]=c.ts;cached[k]=1;}}catch(e){}}}
+function load(){t0=Date.now();st=['loading','loading'];render();
+LOC.forEach(function(p,k){tryAll(p).then(function(j){var d=j.daily;data[k]=d;cur[k]=j.current||null;ts[k]=Date.now();cached[k]=0;st[k]='ok';try{localStorage.setItem(ck(k),JSON.stringify({ts:ts[k],daily:d,current:cur[k]}));}catch(e){}render();}).catch(function(){st[k]='fail';render();});});}
+readCache();load();
+window.addEventListener('online',load);
+})();
 </script>
 </body>
 </html>
