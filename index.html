@@ -33,7 +33,7 @@ svg text{fill:var(--tx);font-size:12px;font-family:inherit}
 .dt{stroke:#fff}.dt.dk{fill:var(--lbl)}.dt.d3c{fill:var(--c3)}.dt.est{fill:var(--halo);stroke:var(--lbl)}.d3c.est{stroke:var(--c3)}
 .tm{font-weight:600;stroke:none}.tm.s1{fill:var(--c1)}.tm.s3{fill:var(--c3)}.tm.s4{fill:var(--c4)}.tm.s2{fill:var(--c2)}
 .sbl{stroke:var(--tx);stroke-width:3}.pf.sea{font-style:italic}
-details.card summary{font-weight:700;font-size:1.02rem;cursor:pointer}details.card[open] summary{margin-bottom:8px}.tt td a{word-break:break-all}.tt td:first-child{min-width:3.6em;word-break:keep-all}.nowh{font-weight:700;font-size:.9rem;margin:4px 0 6px}.nowr{display:flex;gap:10px;margin-bottom:12px}.nowr>div{flex:1;border:1px solid var(--line);border-radius:10px;padding:8px;text-align:center;line-height:1.5}.nowr b{font-size:1.25rem}.wxt td{font-size:.86rem;line-height:1.35}.wxt td:first-child{white-space:nowrap}.wxt td[colspan]{white-space:normal}.wxt .rain{color:var(--warn);font-weight:700}table.tt{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:8px}.tt th,.tt td{border-top:1px solid var(--line);padding:6px 4px;text-align:left;vertical-align:top}.tt th{color:var(--sub);font-weight:600}.g.off{display:none}.land{fill:var(--land);stroke:var(--coast);stroke-width:1}.land.kum{fill:var(--land2)}.gr{stroke:var(--grid);stroke-width:1;opacity:.7}.gt{fill:var(--gtc)}.pf{fill:var(--gtc);font-weight:700;opacity:.9}.pl{font-weight:600;fill:var(--lbl);stroke:none}.lb{fill:var(--halo);opacity:.78}
+details.card summary{font-weight:700;font-size:1.02rem;cursor:pointer}details.card[open] summary{margin-bottom:8px}.tt td a{word-break:break-all}.tt a[href^="tel"]{white-space:nowrap}.tt td:first-child{min-width:3.6em;word-break:keep-all}.mapname{color:var(--c1);text-decoration:underline;font-weight:600;word-break:keep-all;overflow-wrap:normal}.nowh{font-weight:700;font-size:.9rem;margin:4px 0 6px}.nowr{display:flex;gap:10px;margin-bottom:12px}.nowr>div{flex:1;border:1px solid var(--line);border-radius:10px;padding:8px;text-align:center;line-height:1.5}.nowr b{font-size:1.25rem}.wxt td{font-size:.86rem;line-height:1.35}.wxt td:first-child{white-space:nowrap}.wxt td[colspan]{white-space:normal}.wxt .rain{color:var(--warn);font-weight:700}table.tt{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:8px}.tt th,.tt td{border-top:1px solid var(--line);padding:6px 4px;text-align:left;vertical-align:top}.tt th{color:var(--sub);font-weight:600}.g.off{display:none}.land{fill:var(--land);stroke:var(--coast);stroke-width:1}.land.kum{fill:var(--land2)}.gr{stroke:var(--grid);stroke-width:1;opacity:.7}.gt{fill:var(--gtc)}.pf{fill:var(--gtc);font-weight:700;opacity:.9}.pl{font-weight:600;fill:var(--lbl);stroke:none}.lb{fill:var(--halo);opacity:.78}
 .note{font-size:.8rem;color:var(--sub);margin:8px 0 0}
 .day{border-left:6px solid var(--c);padding-left:12px}
 .day h2{color:var(--c)}
@@ -196,16 +196,16 @@ ul{margin:4px 0 0;padding-left:18px;font-size:.9rem}li{margin-bottom:4px}
 
 <details class="card"><summary>🍽️ 식당 후보 · 석식</summary>
 <table class="tt"><thead><tr><th>날짜</th><th>후보</th><th>특징 · 유의점</th></tr></thead><tbody>
-<tr><td rowspan="2">10/15 목<br><span class="small">일정 20:00~</span></td><td>① 리조트 석식 ★</td><td>20시 도착 후 이동 없이 바로 식사 · 4인 접수 완료</td></tr>
-<tr><td>② 반쵸스시</td><td>초밥·회·바사시(말회), 자정까지 영업 · 왕복 택시 예약 필수, 가격 대비 양 적다는 평</td></tr>
-<tr><td rowspan="3">10/16 금<br><span class="small">일정 18:30</span></td><td>① 오뎅 KeiBon ★</td><td>가족 운영 이자카야, 오뎅·바사시·사케 · 18:00~22:30(일정 18:30 가능), 바사시는 사전 예약 권장</td></tr>
-<tr><td>② Gaya</td><td>나베(전골) 이자카야, 라운드 후 따뜻한 한 끼 · 18:30~(개점 시각 = 일정 시각), 나베는 인스타그램 DM 예약</td></tr>
-<tr><td>③ 히로카츠</td><td>바사시·아카우시(적우) 등 향토요리 · 현금만 가능 · 17일 2안 석식 후보</td></tr>
+<tr><td rowspan="2">10/15 목<br><span class="small">일정 20:00~</span></td><td>① 리조트 석식 ★ <a class="mp" style="--c:var(--c1)" href="https://www.google.com/maps/search/?api=1&amp;query=Akamizu%20Golf%20Resort" target="_blank" rel="noopener">지도</a></td><td>20시 도착 후 이동 없이 바로 식사 · 4인 접수 완료</td></tr>
+<tr><td>② 반쵸스시 <a class="mp" style="--c:var(--c1)" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%95%AA%E9%95%B7%E5%AF%BF%E5%8F%B8%20%E9%98%BF%E8%98%87" target="_blank" rel="noopener">지도</a></td><td>초밥·회·바사시(말회), 자정까지 영업 · 왕복 택시 예약 필수, 가격 대비 양 적다는 평</td></tr>
+<tr><td rowspan="3">10/16 금<br><span class="small">일정 18:30</span></td><td>① 오뎅 KeiBon ★ <a class="mp" style="--c:var(--c2)" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%8A%E3%81%A7%E3%82%93%20KeiBon%20%E9%98%BF%E8%98%87" target="_blank" rel="noopener">지도</a></td><td>가족 운영 이자카야, 오뎅·바사시·사케 · 18:00~22:30(일정 18:30 가능), 바사시는 사전 예약 권장</td></tr>
+<tr><td>② Gaya <a class="mp" style="--c:var(--c2)" href="https://www.google.com/maps/search/?api=1&amp;query=Gaya%20%E5%B1%85%E9%85%92%E5%B1%8B%20%E9%98%BF%E8%98%87%20%E5%86%85%E7%89%A7" target="_blank" rel="noopener">지도</a></td><td>나베(전골) 이자카야, 라운드 후 따뜻한 한 끼 · 18:30~(개점 시각 = 일정 시각), 나베는 인스타그램 DM 예약</td></tr>
+<tr><td>③ 히로카츠 <a class="mp" style="--c:var(--c2)" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%B2%E3%82%8D%E3%81%8B%E3%81%A4%20%E9%98%BF%E8%98%87%20%E5%86%85%E7%89%A7" target="_blank" rel="noopener">지도</a></td><td>바사시·아카우시(적우) 등 향토요리 · 현금만 가능 · 17일 2안 석식 후보</td></tr>
 </tbody></table>
-<p class="small">★ 작성자 추천 · 숙소↔우치노마키 온천가 약 9km, 택시 약 15분, 편도 약 3,000~4,000엔 [확인 필요]. 아소 지역은 택시가 적어 프런트에 돌아오는 시간까지 미리 예약해야 합니다. 영업시간은 Google 장소 정보 기준이며 예약 시 재확인 필요.</p>
+<p class="small">각 후보의 "지도" 버튼을 누르면 구글 지도 검색 결과가 열립니다. 이름으로 검색하므로 다른 가게가 나오거나 못 찾을 수 있어 [확인 필요]. ★ 작성자 추천 · 숙소↔우치노마키 온천가 약 9km, 택시 약 15분, 편도 약 3,000~4,000엔 [확인 필요]. 아소 지역은 택시가 적어 프런트에 돌아오는 시간까지 미리 예약해야 합니다. 영업시간은 Google 장소 정보 기준이며 예약 시 재확인 필요.</p>
 <h3 style="font-size:.95rem;margin:12px 0 4px">10/17 석식 · 와규노타카 신시가이점 (焼肉 和牛のたか)</h3>
 <table class="tt"><tbody>
-<tr><td>주소</td><td>新市街5-16 栄通りKビル2F (사쿠라마치에서 도보 약 5분)</td></tr>
+<tr><td>주소</td><td>新市街5-16 栄通りKビル2F (사쿠라마치에서 도보 약 5분) <a class="mp" style="--c:var(--c3)" href="https://www.google.com/maps/search/?api=1&amp;query=Wagyu%20Beef%20Taka%20Kumamoto" target="_blank" rel="noopener">지도</a></td></tr>
 <tr><td>전화</td><td><a href="tel:+81962238815">096-223-8815</a></td></tr>
 <tr><td>영업</td><td>17:00~23:00 (LO 22:30) · 월요일 휴무 → 토요일 영업</td></tr>
 <tr><td>일정</td><td>10/17(토) 19:30 입점 ~ 약 20:50 퇴점(21:00 주차장 복귀 기준 추정) · 영업시간 안에 있음</td></tr>
@@ -217,14 +217,17 @@ ul{margin:4px 0 0;padding-left:18px;font-size:.9rem}li{margin-bottom:4px}
 <p class="small">전화 예약 문구: 10月17日（土）19時半に4名で予約をお願いします。半個室があればお願いします。 (10월 17일(토) 19시 반에 4명 예약 부탁드립니다. 반개별실 있으면 부탁드립니다.)</p>
 </details>
 <details class="card"><summary>🧭 렌터카 내비 입력용</summary>
-<p class="small">렌터카 운전은 10/17(토)만 해당합니다(10/15·10/18은 송영·셔틀, 10/16은 택시). 숙소처럼 여러 날짜에 쓰는 목적지는 날짜별로 따로 적었습니다. 일본 렌터카 내비는 전화번호 검색이 기본 기능입니다. 안 잡히면 주소를 그대로 입력하세요. 동승자는 스마트폰 구글맵으로 같은 목적지를 띄워 교차 확인하면 좋습니다.</p>
-<table class="tt"><thead><tr><th>목적지</th><th>전화</th><th>주소(일본어)</th></tr></thead><tbody>
-<tr><td>0 트라이얼 골프&amp;리조트 ASO<br><span class="small">10/17(토) 08:45 숙소 출발 → 09:38 티업</span></td><td><a href="tel:+81967671616">0967-67-1616</a></td><td>熊本県阿蘇郡南阿蘇村河陽4369-1</td></tr>
-<tr><td>1 골프5 구마모토 인터점<br><span class="small">10/17(토) 16:10 도착 (50분)</span></td><td><a href="tel:+81963886676">096-388-6676</a></td><td>熊本市東区 Kōzono 1-1-5 (일본어 표기 [확인 필요])</td></tr>
-<tr><td>P 사쿠라마치 주차장 (진입 좌회전만)<br><span class="small">10/17(토) 17:30 주차 → 21:10 출차</span></td><td><a href="tel:+81963541111">096-354-1111</a></td><td>熊本市中央区桜町4-3</td></tr>
-<tr><td>P' 츠루야 파킹 (대체)<br><span class="small">10/17(토) 사쿠라마치 주차장 대신 쓸 때</span></td><td><a href="tel:+81963273703">096-327-3703</a></td><td>熊本市中央区安政町3-35</td></tr>
-<tr><td>④ 와규노타카 신시가이점 (도보)<br><span class="small">10/17(토) 19:30 석식(예약 확인 화면은 19:00, 시각 확인 필요)</span></td><td><a href="tel:+81962238815">096-223-8815</a></td><td>熊本市中央区新市街5-16 栄通りKビル2F</td></tr>
-<tr><td>H 아카미즈 골프 리조트 (숙소, 3박)<br><span class="small">10/15(목) 19:50 체크인(송영)<br>10/16(금) 18:30 택시 출발(우치노마키 왕복)<br>10/17(토) 08:45 출발(렌터카) · 22:10 귀환<br>10/18(일) 08:00 셔틀로 공항 이동</span></td><td><a href="tel:+81967351200">0967-35-1200</a></td><td>熊本県阿蘇市赤水1815-1</td></tr>
+<p class="small">렌터카 운전은 10/17(토)만 해당합니다(10/15·10/18은 송영·셔틀, 10/16은 택시). 10/15부터 날짜·시간 순서로 나열했고, 같은 목적지(숙소)가 여러 번 나오면 그때마다 다시 적었습니다. 일본 렌터카 내비는 전화번호 검색이 기본 기능입니다. 안 잡히면 주소를 그대로 입력하세요. 동승자는 스마트폰 구글맵으로 같은 목적지를 띄워 교차 확인하면 좋습니다.</p>
+<table class="tt"><thead><tr><th>일정</th><th>목적지 · 전화</th><th>주소(일본어)</th></tr></thead><tbody>
+<tr><td><b>10/15(목) 19:50</b><br><span class="small">체크인 (공항 송영, 렌터카 없음)</span></td><td>H 아카미즈 골프 리조트 (숙소)<br><a href="tel:+81967351200">0967-35-1200</a></td><td>熊本県阿蘇市赤水1815-1</td></tr>
+<tr><td><b>10/16(금) 18:30</b><br><span class="small">택시 출발 (우치노마키 이자카야 왕복, 렌터카 없음)</span></td><td>H 아카미즈 골프 리조트 (숙소)<br><a href="tel:+81967351200">0967-35-1200</a></td><td>熊本県阿蘇市赤水1815-1</td></tr>
+<tr><td><b>10/17(토) 08:45</b><br><span class="small">숙소 출발(렌터카) → 09:38 티업</span></td><td>0 트라이얼 골프&amp;리조트 ASO<br><a href="tel:+81967671616">0967-67-1616</a></td><td>熊本県阿蘇郡南阿蘇村河陽4369-1</td></tr>
+<tr><td><b>10/17(토) 16:10</b><br><span class="small">15:30 골프장 출발 → 도착 (50분 체류)</span></td><td>1 골프5 구마모토 인터점<br><a href="tel:+81963886676">096-388-6676</a></td><td>熊本市東区 Kōzono 1-1-5 (일본어 표기 [확인 필요])</td></tr>
+<tr><td><b>10/17(토) 17:30</b><br><span class="small">주차 → 21:10 출차</span></td><td>P 사쿠라마치 주차장 (진입 좌회전만)<br><a href="tel:+81963541111">096-354-1111</a></td><td>熊本市中央区桜町4-3</td></tr>
+<tr><td><b>10/17(토) 17:30</b><br><span class="small">대체: 사쿠라마치 주차장 대신 쓸 때</span></td><td>P' 츠루야 파킹 (대체)<br><a href="tel:+81963273703">096-327-3703</a></td><td>熊本市中央区安政町3-35</td></tr>
+<tr><td><b>10/17(토) 19:30</b><br><span class="small">석식 (도보, 예약 확인 화면은 19:00, 시각 확인 필요)</span></td><td>④ 와규노타카 신시가이점<br><a href="tel:+81962238815">096-223-8815</a></td><td>熊本市中央区新市街5-16 栄通りKビル2F</td></tr>
+<tr><td><b>10/17(토) 21:10</b><br><span class="small">출차 → 22:10 숙소 도착(귀환)</span></td><td>H 아카미즈 골프 리조트 (숙소)<br><a href="tel:+81967351200">0967-35-1200</a></td><td>熊本県阿蘇市赤水1815-1</td></tr>
+<tr><td><b>10/18(일) 08:00</b><br><span class="small">숙소 출발, 셔틀로 공항 이동 (렌터카 없음)</span></td><td>H 아카미즈 골프 리조트 (숙소)<br><a href="tel:+81967351200">0967-35-1200</a></td><td>熊本県阿蘇市赤水1815-1</td></tr>
 </tbody></table>
 <p class="small">전화번호는 Google 장소 정보·공식 사이트 기준 · 사쿠라마치 번호는 쇼핑몰 대표번호라 내비가 건물로 안내 · 골프5는 스포츠 디포와 같은 건물 · 주소 일본어 표기 [확인 필요]</p>
 </details>
@@ -268,7 +271,7 @@ ul{margin:4px 0 0;padding-left:18px;font-size:.9rem}li{margin-bottom:4px}
 <li>인당 총 예상 약 130만원 (쇼핑 비용 제외)</li>
 </ul>
 </section>
-<p class="small"><b>v26</b> · 최종 수정 2026.10.11 · 지도 버튼은 구글 지도 검색 링크이며 정확한 지점은 열어서 확인이 필요합니다.</p>
+<p class="small"><b>v29</b> · 최종 수정 2026.10.11 · 지도 버튼은 구글 지도 검색 링크이며 정확한 지점은 열어서 확인이 필요합니다.</p>
 </main>
 <script>
 var sv=document.getElementById('rmap'),FW=820,FH=577,FIT=[170,118,540,380],vb=FIT.slice();
